@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/picture_column"
+    android:layout_marginBottom="@dimen/default_margin_new">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:background="@color/thumbnailGray"
+        android:contentDescription="@string/image_thumbnail"
+        app:layout_constraintBottom_toTopOf="@id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/media_duration"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/video_duration_icon_padding"
+        android:padding="@dimen/video_duration_padding"
+        android:textColor="@color/lensWhite"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_video_padded"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="0:45"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/info_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/c2pa_info_title"
+        android:padding="10dp"
+        android:src="@drawable/ic_c2pa_new"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/Text.Grey600"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/default_margin_new_small"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="10:29PM"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

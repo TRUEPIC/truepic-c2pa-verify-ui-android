@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.truepic.lensdemoverify"
+        minSdkVersion 24
+        targetSdk 34
+        versionCode timestamp()
+        versionName project.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.dev'
+            debuggable true
+            resValue "string", "app_name", "LensDemo Verify Dev"
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            resValue "string", "app_name", "LensDemo Verify"
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+    namespace 'com.truepic.lensdemoverify'
+}
+
+def Integer timestamp() {
+    def MILLIS_IN_MINUTES = 1000 * 60
+    def minSinceEpoch = (new Date()).getTime()/(MILLIS_IN_MINUTES)
+    def cal = new GregorianCalendar()
+    cal.clear()
+    cal.set(2021,0,1)
+    def minSinceJan2021 = cal.getTimeInMillis()/(MILLIS_IN_MINUTES)
+    return minSinceEpoch - minSinceJan2021
+}
+
+dependencies {
+    implementation "androidx.activity:activity:1.6.1"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.squareup.okio:okio:3.6.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'jp.wasabeef:blurry:4.0.1'
+    implementation 'jp.wasabeef:picasso-transformations:2.4.0'
+
+    implementation 'commons-io:commons-io:2.5'
+    implementation 'com.github.MikeOrtiz:TouchImageView:3.6'
+
+    // video player
+    implementation "androidx.media3:media3-exoplayer:1.2.0"
+    implementation "androidx.media3:media3-ui:1.2.0"
+
+    implementation project(path: ':LensSdkVerify')
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="360dp" android:height="360dp" />
+            <solid android:color="@color/thumbnailGray" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="125dp"
+        android:drawable="@drawable/ic_sound_wave"
+        android:left="115dp"
+        android:right="115dp"
+        android:top="125dp" />
+
+</layer-list>
