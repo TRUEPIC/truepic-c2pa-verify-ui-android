@@ -35,11 +35,6 @@ buildscript {
 
 allprojects {
     repositories {
-        // Local lens maven repo
-        maven {
-            url rootProject.file("libs/lens")
-        }
-
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
