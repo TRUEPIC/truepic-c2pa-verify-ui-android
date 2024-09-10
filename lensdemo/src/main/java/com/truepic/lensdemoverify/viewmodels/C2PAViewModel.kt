@@ -34,9 +34,9 @@ class C2PAViewModel(application: Application) : AndroidViewModel(application) {
 
                 val presenter = C2PAPresenter(
                     data, C2PAPresenter.Labels(
-                        res.getString(R.string.c2pa_info_thumbnail_desc_creative_work),
-                        res.getString(R.string.c2pa_info_thumbnail_desc_original),
-                        res.getString(R.string.c2pa_info_thumbnail_desc_modified),
+                        "",
+                        "",
+                        "",
                         res.getString(R.string.c2pa_info_thumbnail_type_photo),
                         res.getString(R.string.c2pa_info_thumbnail_type_image),
                         res.getString(R.string.c2pa_info_thumbnail_type_video),
@@ -52,7 +52,6 @@ class C2PAViewModel(application: Application) : AndroidViewModel(application) {
                     Item(
                         address = presenter.getAddress(getApplication(), manifestStore),
                         thumbnail = presenter.getThumbnail(manifestStore, 200),
-                        descriptor = presenter.getDescriptor(manifestStore),
                         type = presenter.getType(),
                         typeLabel = presenter.getTypeLabel(),
                         capturedWith = presenter.getCapturedWith(manifestStore),
@@ -80,7 +79,6 @@ class C2PAViewModel(application: Application) : AndroidViewModel(application) {
     data class Item(
         val address: String?,
         val thumbnail: Bitmap?,
-        val descriptor: String,
         val type: C2PAPresenter.Type,
         val typeLabel: String,
         val capturedWith: String,
