@@ -144,7 +144,6 @@ class C2PAActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
                             binding.locationText.text = it
                         }
 
-                        binding.thumbnailDesc.text = item.descriptor
                         binding.thumbnailType.text = item.typeLabel
                         binding.capturedWithText.text = item.capturedWith
                         binding.capturedWithLabel.text = item.capturedWithLabel
