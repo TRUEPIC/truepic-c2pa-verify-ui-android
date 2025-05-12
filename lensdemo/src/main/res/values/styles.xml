@@ -1,0 +1,106 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lensBlue500</item>
+        <item name="colorPrimaryDark">@color/lensGrey</item>
+        <item name="colorSurfaceVariant">@color/lensGrey100</item> <!-- i.e. switch unchecked track -->
+        <item name="colorOutline">@color/lensGrey600</item> <!-- i.e. switch unchecked track outline -->
+        <item name="colorAccent">@color/lensBlue600</item>
+        <item name="android:windowBackground">@color/lensWhite</item>
+        <item name="android:statusBarColor">@color/lensBlack</item>
+    </style>
+
+    <style name="Title">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textSize">72sp</item>
+        <item name="android:textColor">@color/lensGrey900</item>
+    </style>
+
+    <style name="Header1">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/lensGrey900</item>
+    </style>
+
+    <style name="Header2">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textColor">@color/lensGrey900</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Header3">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/lensGrey900</item>
+    </style>
+
+    <style name="Header3.Light" parent="Header3">
+        <item name="fontFamily">@font/inter_300_light</item>
+        <item name="android:textColor">@color/lensGrey600</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/inter_400_regular</item>
+        <item name="android:textColor">@color/lensGrey900</item>
+    </style>
+
+    <style name="Text.Grey600" parent="Text">
+        <item name="android:textColor">@color/lensGrey600</item>
+    </style>
+
+    <style name="Text.Semibold" parent="Text">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+    </style>
+
+    <style name="Text.Medium" parent="Text">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/inter_400_regular</item>
+    </style>
+
+    <style name="Text.Medium.Grey100" parent="Text.Medium">
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textColor">@color/lensGrey100</item>
+    </style>
+
+    <style name="Text.Medium.Grey600" parent="Text.Medium">
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textColor">@color/lensGrey600</item>
+    </style>
+
+    <style name="Text.Grey" parent="Text">
+        <item name="android:textColor">@color/lensGrey600</item>
+    </style>
+
+    <style name="Button.Main" parent="@style/Widget.Material3.Button.ElevatedButton">
+        <item name="strokeColor">@color/lensTransparent</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="strokeWidth">.5dp</item>
+        <item name="backgroundTint">#FFFFFF</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/lensBlue600</item>
+        <item name="shapeAppearance">@style/Button.ShapeAppearance</item>
+    </style>
+
+    <style name="Button.ShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="Button.Navigation" parent="@style/Widget.Material3.Button.TextButton.Icon">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/navigation_button</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="iconPadding">@dimen/default_margin_small</item>
+        <item name="iconTint">@color/navigation_button</item>
+        <item name="shapeAppearance">@style/Button.ShapeAppearance</item>
+    </style>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lensTransparent">#00ffffff</color>
+    <color name="lensGrey">#444444</color>
+    <color name="lensGrey100">#E2E8EC</color>
+    <color name="lensGrey600">#616A72</color>
+    <color name="lensGrey900">#202529</color>
+    <color name="lensBlue500">#1A6DFF</color>
+    <color name="lensBlue600">#165AD9</color>
+    <color name="lensWhite">#FFFFFF</color>
+    <color name="lensBlack">#000000</color>
+    <color name="lensGreyAlt">#FAFAFA</color>
+
+    <color name="shadow">#80000000</color>
+    <color name="thumbnailGray">#bcbcbc</color>
+</resources>
